@@ -7,22 +7,21 @@
 
 import UIKit
 import SideMenuSwift
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func sharedAppDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        for family in UIFont.familyNames {
-            print("\(family)")
-
-            for name in UIFont.fontNames(forFamilyName: family) {
-                print("\(name)")
-            }
-        }
+    
+        IQKeyboardManager.shared.enable = true
         
         #if DEBUG
         var arguments = ProcessInfo.processInfo.arguments
@@ -35,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func configureSideMenu() {
+    func configureSideMenu() {
         
         let sideMenuController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")
         UIApplication.shared.keyWindow?.rootViewController = sideMenuController
@@ -44,6 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SideMenuController.preferences.basic.defaultCacheKey = "0"
     }
 
+    // MARK - TextField Padding Method
+    
+    func getTextFieldLeftAndRightView() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:10))
+        return paddingView
+        
+    }
+    
+    func getTextFieldLeftAndRightViewInEditProfile() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:5))
+        return paddingView
+    }
 }
 
 #if DEBUG

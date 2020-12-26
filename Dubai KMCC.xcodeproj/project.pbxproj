@@ -9,10 +9,26 @@
 /* Begin PBXBuildFile section */
 		02AA798C727479290B6D6928 /* Pods_Dubai_KMCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FA483DC90988575BAA6575 /* Pods_Dubai_KMCC.framework */; };
 		0B032A00C1E2FA415657B2AE /* Pods_Dubai_KMCC_Dubai_KMCCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C26B0F3741FCBF1BC9EA1E /* Pods_Dubai_KMCC_Dubai_KMCCUITests.framework */; };
+		1822452C25971FB100A90E0E /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822452A25971FB000A90E0E /* GalleryCell.swift */; };
+		1822452D25971FB100A90E0E /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1822452B25971FB100A90E0E /* GalleryCell.xib */; };
+		1822454925972A1C00A90E0E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822454625972A1B00A90E0E /* NotificationViewController.swift */; };
+		1822454A25972A1C00A90E0E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822454825972A1B00A90E0E /* GalleryViewController.swift */; };
+		1822455325972A4000A90E0E /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822455125972A4000A90E0E /* NotificationCell.swift */; };
+		1822455425972A4000A90E0E /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1822455225972A4000A90E0E /* NotificationCell.xib */; };
+		182245602597391F00A90E0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822455F2597391F00A90E0E /* LoginViewController.swift */; };
 		183613322595E48C005C1643 /* Avenir-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1836132F2595E48C005C1643 /* Avenir-Book.otf */; };
 		183613332595E48C005C1643 /* Avenir-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 183613302595E48C005C1643 /* Avenir-Medium.otf */; };
 		183613342595E48C005C1643 /* Avenir-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 183613312595E48C005C1643 /* Avenir-Roman.otf */; };
 		18361358259611E0005C1643 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18361357259611E0005C1643 /* Extensions.swift */; };
+		1884297C25974D840001F884 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884297B25974D840001F884 /* SignUpViewController.swift */; };
+		1884298125975CB00001F884 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884298025975CAF0001F884 /* Constant.swift */; };
+		188429862597681A0001F884 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429852597681A0001F884 /* AboutUsViewController.swift */; };
+		1884298F25976C170001F884 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884298E25976C170001F884 /* ForgotPasswordViewController.swift */; };
+		18842994259778CB0001F884 /* SchemeRegiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18842993259778CB0001F884 /* SchemeRegiViewController.swift */; };
+		18842999259778D80001F884 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18842998259778D80001F884 /* MyProfileViewController.swift */; };
+		188429A9259779220001F884 /* PaymentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429A8259779220001F884 /* PaymentHistoryViewController.swift */; };
+		188429AE259779380001F884 /* PayRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429AD259779380001F884 /* PayRequestViewController.swift */; };
+		188429B32597794D0001F884 /* RenewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429B22597794D0001F884 /* RenewCardViewController.swift */; };
 		18EF430E2595B52D00314F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF430C2595B52D00314F02 /* Main.storyboard */; };
 		18EF43102595B53100314F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EF430F2595B53100314F02 /* Assets.xcassets */; };
 		18EF43132595B53100314F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF43112595B53100314F02 /* LaunchScreen.storyboard */; };
@@ -43,10 +59,26 @@
 
 /* Begin PBXFileReference section */
 		12625783B367B3F8A6D0F47D /* Pods-Dubai KMCC-Dubai KMCCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dubai KMCC-Dubai KMCCUITests.release.xcconfig"; path = "Target Support Files/Pods-Dubai KMCC-Dubai KMCCUITests/Pods-Dubai KMCC-Dubai KMCCUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1822452A25971FB000A90E0E /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		1822452B25971FB100A90E0E /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
+		1822454625972A1B00A90E0E /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		1822454825972A1B00A90E0E /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		1822455125972A4000A90E0E /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		1822455225972A4000A90E0E /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		1822455F2597391F00A90E0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1836132F2595E48C005C1643 /* Avenir-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Book.otf"; sourceTree = "<group>"; };
 		183613302595E48C005C1643 /* Avenir-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.otf"; sourceTree = "<group>"; };
 		183613312595E48C005C1643 /* Avenir-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Roman.otf"; sourceTree = "<group>"; };
 		18361357259611E0005C1643 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1884297B25974D840001F884 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1884298025975CAF0001F884 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		188429852597681A0001F884 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		1884298E25976C170001F884 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		18842993259778CB0001F884 /* SchemeRegiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeRegiViewController.swift; sourceTree = "<group>"; };
+		18842998259778D80001F884 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		188429A8259779220001F884 /* PaymentHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryViewController.swift; sourceTree = "<group>"; };
+		188429AD259779380001F884 /* PayRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRequestViewController.swift; sourceTree = "<group>"; };
+		188429B22597794D0001F884 /* RenewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewCardViewController.swift; sourceTree = "<group>"; };
 		18EF43032595B52D00314F02 /* Dubai KMCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dubai KMCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EF430D2595B52D00314F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EF430F2595B53100314F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +131,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1822452625971F0C00A90E0E /* Cotroller */ = {
+			isa = PBXGroup;
+			children = (
+				18EF43882595BC4600314F02 /* SideMenuViewController */,
+				1822454725972A1B00A90E0E /* GalleryView */,
+				1822454525972A1B00A90E0E /* NotificationView */,
+				182245612597392600A90E0E /* LoginView */,
+				188429B7259779720001F884 /* PaymentHistoryView */,
+				188429B82597798A0001F884 /* PayRequestView */,
+				188429BC2597799F0001F884 /* RenewCardView */,
+			);
+			path = Cotroller;
+			sourceTree = "<group>";
+		};
+		1822453125971FBC00A90E0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1822453525971FC800A90E0E /* GalleryCell */,
+				1822455825972A4900A90E0E /* NotificationCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1822453525971FC800A90E0E /* GalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				1822452A25971FB000A90E0E /* GalleryCell.swift */,
+				1822452B25971FB100A90E0E /* GalleryCell.xib */,
+			);
+			path = GalleryCell;
+			sourceTree = "<group>";
+		};
+		1822454525972A1B00A90E0E /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				1822454625972A1B00A90E0E /* NotificationViewController.swift */,
+			);
+			path = NotificationView;
+			sourceTree = "<group>";
+		};
+		1822454725972A1B00A90E0E /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				1822454825972A1B00A90E0E /* GalleryViewController.swift */,
+			);
+			path = GalleryView;
+			sourceTree = "<group>";
+		};
+		1822455825972A4900A90E0E /* NotificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				1822455125972A4000A90E0E /* NotificationCell.swift */,
+				1822455225972A4000A90E0E /* NotificationCell.xib */,
+			);
+			path = NotificationCell;
+			sourceTree = "<group>";
+		};
+		182245612597392600A90E0E /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				1822455F2597391F00A90E0E /* LoginViewController.swift */,
+				1884297B25974D840001F884 /* SignUpViewController.swift */,
+				1884298E25976C170001F884 /* ForgotPasswordViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		1836132D2595E45E005C1643 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +213,57 @@
 			children = (
 				1836132D2595E45E005C1643 /* Font */,
 				18361357259611E0005C1643 /* Extensions.swift */,
+				1884298025975CAF0001F884 /* Constant.swift */,
 			);
 			path = Extra;
+			sourceTree = "<group>";
+		};
+		1884298A259768340001F884 /* AboutUsView */ = {
+			isa = PBXGroup;
+			children = (
+				188429852597681A0001F884 /* AboutUsViewController.swift */,
+			);
+			path = AboutUsView;
+			sourceTree = "<group>";
+		};
+		1884299D259778E40001F884 /* SchemeRegistrationView */ = {
+			isa = PBXGroup;
+			children = (
+				18842993259778CB0001F884 /* SchemeRegiViewController.swift */,
+			);
+			path = SchemeRegistrationView;
+			sourceTree = "<group>";
+		};
+		188429A1259778FA0001F884 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				18842998259778D80001F884 /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		188429B7259779720001F884 /* PaymentHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				188429A8259779220001F884 /* PaymentHistoryViewController.swift */,
+			);
+			path = PaymentHistoryView;
+			sourceTree = "<group>";
+		};
+		188429B82597798A0001F884 /* PayRequestView */ = {
+			isa = PBXGroup;
+			children = (
+				188429AD259779380001F884 /* PayRequestViewController.swift */,
+			);
+			path = PayRequestView;
+			sourceTree = "<group>";
+		};
+		188429BC2597799F0001F884 /* RenewCardView */ = {
+			isa = PBXGroup;
+			children = (
+				188429B22597794D0001F884 /* RenewCardViewController.swift */,
+			);
+			path = RenewCardView;
 			sourceTree = "<group>";
 		};
 		18EF42FA2595B52D00314F02 = {
@@ -144,9 +292,10 @@
 			isa = PBXGroup;
 			children = (
 				18EF43662595BC1000314F02 /* AppDelegate.swift */,
+				1822453125971FBC00A90E0E /* Views */,
 				1836132E2595E46C005C1643 /* Extra */,
 				18EF435A2595BB5F00314F02 /* SideMenu */,
-				18EF43882595BC4600314F02 /* SideMenuViewController */,
+				1822452625971F0C00A90E0E /* Cotroller */,
 				18EF430C2595B52D00314F02 /* Main.storyboard */,
 				18EF430F2595B53100314F02 /* Assets.xcassets */,
 				18EF43112595B53100314F02 /* LaunchScreen.storyboard */,
@@ -185,6 +334,9 @@
 			isa = PBXGroup;
 			children = (
 				18EF43912595BC5600314F02 /* HomeView */,
+				1884298A259768340001F884 /* AboutUsView */,
+				1884299D259778E40001F884 /* SchemeRegistrationView */,
+				188429A1259778FA0001F884 /* MyProfile */,
 			);
 			path = SideMenuViewController;
 			sourceTree = "<group>";
@@ -332,8 +484,10 @@
 				18EF43102595B53100314F02 /* Assets.xcassets in Resources */,
 				183613342595E48C005C1643 /* Avenir-Roman.otf in Resources */,
 				18EF430E2595B52D00314F02 /* Main.storyboard in Resources */,
+				1822455425972A4000A90E0E /* NotificationCell.xib in Resources */,
 				183613322595E48C005C1643 /* Avenir-Book.otf in Resources */,
 				183613332595E48C005C1643 /* Avenir-Medium.otf in Resources */,
+				1822452D25971FB100A90E0E /* GalleryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,8 +615,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18842999259778D80001F884 /* MyProfileViewController.swift in Sources */,
+				188429AE259779380001F884 /* PayRequestViewController.swift in Sources */,
+				182245602597391F00A90E0E /* LoginViewController.swift in Sources */,
+				1822455325972A4000A90E0E /* NotificationCell.swift in Sources */,
+				1822452C25971FB100A90E0E /* GalleryCell.swift in Sources */,
+				1822454A25972A1C00A90E0E /* GalleryViewController.swift in Sources */,
+				188429862597681A0001F884 /* AboutUsViewController.swift in Sources */,
+				1884297C25974D840001F884 /* SignUpViewController.swift in Sources */,
 				18EF43672595BC1100314F02 /* AppDelegate.swift in Sources */,
+				1822454925972A1C00A90E0E /* NotificationViewController.swift in Sources */,
+				18842994259778CB0001F884 /* SchemeRegiViewController.swift in Sources */,
 				18EF435C2595BB5F00314F02 /* MenuViewController.swift in Sources */,
+				188429B32597794D0001F884 /* RenewCardViewController.swift in Sources */,
+				1884298125975CB00001F884 /* Constant.swift in Sources */,
+				188429A9259779220001F884 /* PaymentHistoryViewController.swift in Sources */,
+				1884298F25976C170001F884 /* ForgotPasswordViewController.swift in Sources */,
 				18EF438A2595BC4600314F02 /* HomeViewController.swift in Sources */,
 				18361358259611E0005C1643 /* Extensions.swift in Sources */,
 			);

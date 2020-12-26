@@ -7,6 +7,23 @@
 
 import Foundation
 import UIKit
+import SideMenuSwift
+
+//MARK: -
+extension UIViewController {
+ 
+    @IBAction func btnMenuAction(_ sender: UIButton) {
+        sideMenuController?.revealMenu()
+    }
+    
+    @IBAction func btnBackAction(_ sender: UIButton = UIButton()) {
+        if navigationController != nil {
+            navigationController!.popViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+}
 
 extension UIColor {
     @nonobjc class var appColor: UIColor {
@@ -21,13 +38,13 @@ extension UIColor {
     @nonobjc class var borderColor: UIColor {
         return UIColor(red: 226.0/255.0, green: 226.0 / 255.0, blue: 226.0/255.0, alpha: 1.0)
     }
+    @nonobjc class var btnUnselectColor: UIColor {
+        return UIColor(red: 160.0/255.0, green: 160.0 / 255.0, blue: 160.0/255.0, alpha: 1.0)
+    }
+    @nonobjc class var btnSelectColor: UIColor {
+        return UIColor(red: 112.0/255.0, green: 112.0 / 255.0, blue: 112.0/255.0, alpha: 1.0)
+    }
     
-    @nonobjc class var pinkishGrey: UIColor {
-        return UIColor(white: 209.0 / 255.0, alpha: 1.0)
-    }
-    @nonobjc class var warmGrey: UIColor {
-        return UIColor(white: 161.0 / 255.0, alpha: 1.0)
-    }
     @nonobjc class var warmGreyTwo: UIColor {
         return UIColor(white: 152.0 / 255.0, alpha: 1.0)
     }

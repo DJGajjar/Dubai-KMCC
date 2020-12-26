@@ -40,6 +40,8 @@
 		<string>Avenir-Roman</string>
 		<string>Avenir-Medium</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

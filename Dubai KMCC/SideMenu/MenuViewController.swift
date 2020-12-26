@@ -23,7 +23,14 @@ class MenuViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var lblEmailID: UILabel!
+    @IBOutlet weak var lblMobileNumber: UILabel!
+    @IBOutlet weak var lblLogin: UILabel!
+    
     @IBOutlet weak var selectionMenuTrailingConstraint: NSLayoutConstraint!
+    
+    var isLogin: String!
     
     var isDarkModeEnabled = false
     private var themeColor = UIColor.white
@@ -34,9 +41,49 @@ class MenuViewController: UIViewController {
         isDarkModeEnabled = SideMenuController.preferences.basic.position == .under
         configureView()
         
-        sideMenuController?.cache(viewControllerGenerator: {
-            self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
-        }, with: "0")
+        isLogin = UserDefaults.standard.object(forKey: ISLOGIN) as? String ?? "No"
+        
+        if isLogin == "No" {
+            lblUserName.isHidden = true
+            lblEmailID.isHidden = true
+            lblMobileNumber.isHidden = true
+            lblLogin.isHidden = false
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+            }, with: "0")
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "AboutUsV")
+            }, with: "1")
+        }else {
+            
+            lblUserName.isHidden = false
+            lblEmailID.isHidden = false
+            lblMobileNumber.isHidden = false
+            lblLogin.isHidden = true
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+            }, with: "0")
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+            }, with: "1")
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+            }, with: "2")
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "AboutUsV")
+            }, with: "3")
+            
+            sideMenuController?.cache(viewControllerGenerator: {
+                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+            }, with: "4")
+            
+        }
 
         sideMenuController?.delegate = self
     }
@@ -83,7 +130,12 @@ class MenuViewController: UIViewController {
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        if isLogin == "No" {
+            return 2
+        }else {
+            return 5
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -94,7 +146,11 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SelectionCell
         
-        cell.titleLabel.text = ["Home"][indexPath.row]
+        if isLogin == "No" {
+            cell.titleLabel.text = ["Home","About Us"][indexPath.row]
+        }else {
+            cell.titleLabel.text = ["Home","Scheme Registration","Alert","About Us","Log Out"][indexPath.row]
+        }
         
         cell.selectionStyle = .none
         return cell
@@ -103,23 +159,46 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-
-        if indexPath.row != 0 {
+        
+        UserDefaults.standard.set("SideMenu", forKey: ABOUTUSACTION)
+        
+        if indexPath.row == 0 {
             sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
             
             
             if let identifier = sideMenuController?.currentCacheIdentifier() {
                 print("[Example] View Controller Cache Identifier: \(identifier)")
             }
+        }else if indexPath.row == 1 {
+            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+
+
+            if let identifier = sideMenuController?.currentCacheIdentifier() {
+                print("[Example] View Controller Cache Identifier: \(identifier)")
+            }
+        }else if indexPath.row == 2 {
+            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+
+
+            if let identifier = sideMenuController?.currentCacheIdentifier() {
+                print("[Example] View Controller Cache Identifier: \(identifier)")
+            }
+        }else if indexPath.row == 3 {
+            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+
+
+            if let identifier = sideMenuController?.currentCacheIdentifier() {
+                print("[Example] View Controller Cache Identifier: \(identifier)")
+            }
+        }else if indexPath.row == 4 {
+            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+
+            UserDefaults.standard.set("SideMenuLogOut", forKey: ISLOGIN)
+            
+            if let identifier = sideMenuController?.currentCacheIdentifier() {
+                print("[Example] View Controller Cache Identifier: \(identifier)")
+            }
         }
-//        else if indexPath.row != 1 {
-//            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
-//
-//
-//            if let identifier = sideMenuController?.currentCacheIdentifier() {
-//                print("[Example] View Controller Cache Identifier: \(identifier)")
-//            }
-//        }
         sideMenuController?.hideMenu()
     }
     

@@ -34,13 +34,15 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
     
     var bannerDataArray = ["Slider_1","Slider_2",""]
     
+    var isLogin: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        constHeightProfile.constant = 150.0
-        constHeightView.constant = 720.0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
         let scale: Bool = true
         
@@ -89,11 +91,84 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
         self.collectionInfo.reloadData()
         
         self.startTimer()
+        
+        isLogin = UserDefaults.standard.object(forKey: ISLOGIN) as? String ?? "No"
+        
+        if isLogin == "No" {
+            lblActivity_1.text = "Welfare Login"
+            lblActivity_2.text = "Gallery"
+            lblActivity_3.text = "About Us"
+            
+            imgActivity_1.image = UIImage(named: "PayRequest")
+            imgActivity_2.image = UIImage(named: "GalleryIcon")
+            imgActivity_3.image = UIImage(named: "AboutusIcon")
+            
+            constHeightProfile.constant = 0.0
+            constHeightView.constant = 580.0
+        }else if isLogin == "SideMenuLogOut" {
+            UserDefaults.standard.set("No", forKey: ISLOGIN)
+            
+            AppDelegate().configureSideMenu()
+            
+            lblActivity_1.text = "Welfare Login"
+            lblActivity_2.text = "Gallery"
+            lblActivity_3.text = "About Us"
+            
+            imgActivity_1.image = UIImage(named: "PayRequest")
+            imgActivity_2.image = UIImage(named: "GalleryIcon")
+            imgActivity_3.image = UIImage(named: "AboutusIcon")
+            
+            constHeightProfile.constant = 0.0
+            constHeightView.constant = 580.0
+        }else {
+            lblActivity_1.text = "Payment History"
+            lblActivity_2.text = "Pay \n Request"
+            lblActivity_3.text = "Renew \n Card"
+            
+            imgActivity_1.image = UIImage(named: "PaymenIcon")
+            imgActivity_2.image = UIImage(named: "PayRequest")
+            imgActivity_3.image = UIImage(named: "RenewCard")
+            
+            constHeightProfile.constant = 150.0
+            constHeightView.constant = 720.0
+        }
     }
     
-    @IBAction func btnMenuAction(_ sender: UIButton)
-    {
-        sideMenuController?.revealMenu()
+    @IBAction func btnNotificationAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "NotificationView", sender: nil)
+    }
+    
+    @IBAction func btnActivity_1Action(_ sender: UIButton) {
+        
+        if isLogin == "No" {
+            performSegue(withIdentifier: "LoginView", sender: nil)
+        }else {
+            
+        }
+    }
+    
+    @IBAction func btnActivity_2Action(_ sender: UIButton) {
+        
+        if isLogin == "No" {
+            performSegue(withIdentifier: "GalleryView", sender: nil)
+        }else {
+            
+        }
+    }
+    
+    @IBAction func btnActivity_3Action(_ sender: UIButton) {
+        
+        if isLogin == "No" {
+            UserDefaults.standard.set("HomeView", forKey: ABOUTUSACTION)
+            performSegue(withIdentifier: "AboutUsView", sender: nil)
+        }else {
+            
+        }
+        
+    }
+    
+    @IBAction func btnViewAllAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "GalleryView", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
