@@ -29,6 +29,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var lblLogin: UILabel!
     
     @IBOutlet weak var selectionMenuTrailingConstraint: NSLayoutConstraint!
+        
+    var iconArr = ["HomeIcon","SchemeregIcon","AlertsIcon","AboutIcon","LogoutIcon"]
     
     var isLogin: String!
     
@@ -68,12 +70,16 @@ class MenuViewController: UIViewController {
             }, with: "0")
             
             sideMenuController?.cache(viewControllerGenerator: {
-                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+                self.storyboard?.instantiateViewController(withIdentifier: "SchemeRegiV")
             }, with: "1")
             
             sideMenuController?.cache(viewControllerGenerator: {
-                self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
+                self.storyboard?.instantiateViewController(withIdentifier: "NotificationV")
             }, with: "2")
+            
+//            sideMenuController?.cache(viewControllerGenerator: {
+//                self.storyboard?.instantiateViewController(withIdentifier: "MyProfileV")
+//            }, with: "3")
             
             sideMenuController?.cache(viewControllerGenerator: {
                 self.storyboard?.instantiateViewController(withIdentifier: "AboutUsV")
@@ -139,7 +145,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -148,8 +154,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
         
         if isLogin == "No" {
             cell.titleLabel.text = ["Home","About Us"][indexPath.row]
+            cell.imgIcon.image = UIImage(named: ["HomeIcon","AboutIcon"][indexPath.row])
         }else {
             cell.titleLabel.text = ["Home","Scheme Registration","Alert","About Us","Log Out"][indexPath.row]
+            cell.imgIcon.image = UIImage(named: ["HomeIcon","SchemeregIcon","AlertsIcon","AboutIcon","LogoutIcon"][indexPath.row])
         }
         
         cell.selectionStyle = .none
@@ -160,45 +168,74 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         
-        UserDefaults.standard.set("SideMenu", forKey: ABOUTUSACTION)
+        UserDefaults.standard.set("No Opt", forKey: ABOUTUSACTION)
         
-        if indexPath.row == 0 {
-            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+        if isLogin == "No" {
+                    
+            if indexPath.row == 0 {
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+                
+                
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
+            }else if indexPath.row == 1 {
+                
+                UserDefaults.standard.set("AboutP", forKey: ABOUTUSACTION)
+                
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
+            }
             
-            
-            if let identifier = sideMenuController?.currentCacheIdentifier() {
-                print("[Example] View Controller Cache Identifier: \(identifier)")
-            }
-        }else if indexPath.row == 1 {
-            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+        }else {
+            if indexPath.row == 0 {
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+                
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
+            }else if indexPath.row == 1 {
+                
+                UserDefaults.standard.set("AboutP", forKey: ABOUTUSACTION)
+                
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
+            }else if indexPath.row == 2 {
+                
+                UserDefaults.standard.set("AlertNoti", forKey: ABOUTUSACTION)
+                
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+                
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
+            }else if indexPath.row == 3 {
+                
+                UserDefaults.standard.set("AboutP", forKey: ABOUTUSACTION)
+                
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
 
 
-            if let identifier = sideMenuController?.currentCacheIdentifier() {
-                print("[Example] View Controller Cache Identifier: \(identifier)")
-            }
-        }else if indexPath.row == 2 {
-            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
+            }else if indexPath.row == 4 {
+                sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
 
-
-            if let identifier = sideMenuController?.currentCacheIdentifier() {
-                print("[Example] View Controller Cache Identifier: \(identifier)")
-            }
-        }else if indexPath.row == 3 {
-            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
-
-
-            if let identifier = sideMenuController?.currentCacheIdentifier() {
-                print("[Example] View Controller Cache Identifier: \(identifier)")
-            }
-        }else if indexPath.row == 4 {
-            sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
-
-            UserDefaults.standard.set("SideMenuLogOut", forKey: ISLOGIN)
-            
-            if let identifier = sideMenuController?.currentCacheIdentifier() {
-                print("[Example] View Controller Cache Identifier: \(identifier)")
+                UserDefaults.standard.set("SideMenuLogOut", forKey: ISLOGIN)
+                
+                if let identifier = sideMenuController?.currentCacheIdentifier() {
+                    print("[Example] View Controller Cache Identifier: \(identifier)")
+                }
             }
         }
+              
         sideMenuController?.hideMenu()
     }
     
@@ -238,6 +275,7 @@ extension MenuViewController: SideMenuControllerDelegate {
 
 class SelectionCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imgIcon: UIImageView!
 }
 
 

@@ -29,6 +29,12 @@
 		188429A9259779220001F884 /* PaymentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429A8259779220001F884 /* PaymentHistoryViewController.swift */; };
 		188429AE259779380001F884 /* PayRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429AD259779380001F884 /* PayRequestViewController.swift */; };
 		188429B32597794D0001F884 /* RenewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188429B22597794D0001F884 /* RenewCardViewController.swift */; };
+		18D22E0B2599BBCA000011B4 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D22E092599BBCA000011B4 /* DateHeader.swift */; };
+		18D22E0C2599BBCB000011B4 /* DateHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D22E0A2599BBCA000011B4 /* DateHeader.xib */; };
+		18D22E122599C2CE000011B4 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D22E102599C2CE000011B4 /* ActionCell.swift */; };
+		18D22E132599C2CE000011B4 /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D22E112599C2CE000011B4 /* ActionCell.xib */; };
+		18D22E202599C7CA000011B4 /* PaymentHisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D22E1E2599C7C9000011B4 /* PaymentHisCell.swift */; };
+		18D22E212599C7CA000011B4 /* PaymentHisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D22E1F2599C7C9000011B4 /* PaymentHisCell.xib */; };
 		18EF430E2595B52D00314F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF430C2595B52D00314F02 /* Main.storyboard */; };
 		18EF43102595B53100314F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EF430F2595B53100314F02 /* Assets.xcassets */; };
 		18EF43132595B53100314F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF43112595B53100314F02 /* LaunchScreen.storyboard */; };
@@ -79,6 +85,12 @@
 		188429A8259779220001F884 /* PaymentHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryViewController.swift; sourceTree = "<group>"; };
 		188429AD259779380001F884 /* PayRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRequestViewController.swift; sourceTree = "<group>"; };
 		188429B22597794D0001F884 /* RenewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewCardViewController.swift; sourceTree = "<group>"; };
+		18D22E092599BBCA000011B4 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
+		18D22E0A2599BBCA000011B4 /* DateHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateHeader.xib; sourceTree = "<group>"; };
+		18D22E102599C2CE000011B4 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		18D22E112599C2CE000011B4 /* ActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
+		18D22E1E2599C7C9000011B4 /* PaymentHisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHisCell.swift; sourceTree = "<group>"; };
+		18D22E1F2599C7C9000011B4 /* PaymentHisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentHisCell.xib; sourceTree = "<group>"; };
 		18EF43032595B52D00314F02 /* Dubai KMCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dubai KMCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EF430D2595B52D00314F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EF430F2595B53100314F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +162,8 @@
 			children = (
 				1822453525971FC800A90E0E /* GalleryCell */,
 				1822455825972A4900A90E0E /* NotificationCell */,
+				18D22E082599BA1B000011B4 /* PaymentHistoryCell */,
+				18D22E172599C2D7000011B4 /* ActionCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +280,26 @@
 			path = RenewCardView;
 			sourceTree = "<group>";
 		};
+		18D22E082599BA1B000011B4 /* PaymentHistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				18D22E092599BBCA000011B4 /* DateHeader.swift */,
+				18D22E0A2599BBCA000011B4 /* DateHeader.xib */,
+				18D22E1E2599C7C9000011B4 /* PaymentHisCell.swift */,
+				18D22E1F2599C7C9000011B4 /* PaymentHisCell.xib */,
+			);
+			path = PaymentHistoryCell;
+			sourceTree = "<group>";
+		};
+		18D22E172599C2D7000011B4 /* ActionCell */ = {
+			isa = PBXGroup;
+			children = (
+				18D22E102599C2CE000011B4 /* ActionCell.swift */,
+				18D22E112599C2CE000011B4 /* ActionCell.xib */,
+			);
+			path = ActionCell;
+			sourceTree = "<group>";
+		};
 		18EF42FA2595B52D00314F02 = {
 			isa = PBXGroup;
 			children = (
@@ -292,8 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				18EF43662595BC1000314F02 /* AppDelegate.swift */,
-				1822453125971FBC00A90E0E /* Views */,
 				1836132E2595E46C005C1643 /* Extra */,
+				1822453125971FBC00A90E0E /* Views */,
 				18EF435A2595BB5F00314F02 /* SideMenu */,
 				1822452625971F0C00A90E0E /* Cotroller */,
 				18EF430C2595B52D00314F02 /* Main.storyboard */,
@@ -481,12 +515,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EF43132595B53100314F02 /* LaunchScreen.storyboard in Resources */,
+				18D22E212599C7CA000011B4 /* PaymentHisCell.xib in Resources */,
 				18EF43102595B53100314F02 /* Assets.xcassets in Resources */,
 				183613342595E48C005C1643 /* Avenir-Roman.otf in Resources */,
+				18D22E132599C2CE000011B4 /* ActionCell.xib in Resources */,
 				18EF430E2595B52D00314F02 /* Main.storyboard in Resources */,
 				1822455425972A4000A90E0E /* NotificationCell.xib in Resources */,
 				183613322595E48C005C1643 /* Avenir-Book.otf in Resources */,
 				183613332595E48C005C1643 /* Avenir-Medium.otf in Resources */,
+				18D22E0C2599BBCB000011B4 /* DateHeader.xib in Resources */,
 				1822452D25971FB100A90E0E /* GalleryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,11 +658,14 @@
 				1822455325972A4000A90E0E /* NotificationCell.swift in Sources */,
 				1822452C25971FB100A90E0E /* GalleryCell.swift in Sources */,
 				1822454A25972A1C00A90E0E /* GalleryViewController.swift in Sources */,
+				18D22E122599C2CE000011B4 /* ActionCell.swift in Sources */,
 				188429862597681A0001F884 /* AboutUsViewController.swift in Sources */,
 				1884297C25974D840001F884 /* SignUpViewController.swift in Sources */,
 				18EF43672595BC1100314F02 /* AppDelegate.swift in Sources */,
 				1822454925972A1C00A90E0E /* NotificationViewController.swift in Sources */,
+				18D22E0B2599BBCA000011B4 /* DateHeader.swift in Sources */,
 				18842994259778CB0001F884 /* SchemeRegiViewController.swift in Sources */,
+				18D22E202599C7CA000011B4 /* PaymentHisCell.swift in Sources */,
 				18EF435C2595BB5F00314F02 /* MenuViewController.swift in Sources */,
 				188429B32597794D0001F884 /* RenewCardViewController.swift in Sources */,
 				1884298125975CB00001F884 /* Constant.swift in Sources */,

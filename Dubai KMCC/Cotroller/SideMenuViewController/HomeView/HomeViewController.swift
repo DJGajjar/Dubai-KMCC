@@ -138,12 +138,16 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
         performSegue(withIdentifier: "NotificationView", sender: nil)
     }
     
+    @IBAction func btnEditProfileAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "EditProfileView", sender: nil)
+    }
+    
     @IBAction func btnActivity_1Action(_ sender: UIButton) {
         
         if isLogin == "No" {
             performSegue(withIdentifier: "LoginView", sender: nil)
         }else {
-            
+            performSegue(withIdentifier: "PaymentView", sender: nil)
         }
     }
     
@@ -152,7 +156,7 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
         if isLogin == "No" {
             performSegue(withIdentifier: "GalleryView", sender: nil)
         }else {
-            
+            performSegue(withIdentifier: "PayRequestView", sender: nil)
         }
     }
     
@@ -162,7 +166,7 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
             UserDefaults.standard.set("HomeView", forKey: ABOUTUSACTION)
             performSegue(withIdentifier: "AboutUsView", sender: nil)
         }else {
-            
+            performSegue(withIdentifier: "RenewCardView", sender: nil)
         }
         
     }
