@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var txtMobileNumber: UITextField!
     @IBOutlet var txtEmailID: UITextField!
     @IBOutlet var txtWatsappNumber: UITextField!
+    @IBOutlet var txtEmiratesID: UITextField!
     
     @IBOutlet var btnExisting: UIButton!
     @IBOutlet var btnNewUser: UIButton!
@@ -67,18 +68,23 @@ class SignUpViewController: UIViewController {
         txtWatsappNumber.leftViewMode = .always
         txtWatsappNumber.rightViewMode = .always
         
-        constHeihgtWelfare.constant = 60.0
+        txtEmiratesID.leftView = AppDelegate().getTextFieldLeftAndRightView()
+        txtEmiratesID.rightView = AppDelegate().getTextFieldLeftAndRightView()
+        txtEmiratesID.leftViewMode = .always
+        txtEmiratesID.rightViewMode = .always
+        
+        constHeihgtWelfare.constant = 120.0
         constHeihgtNewUser.constant = 0.0
-        constHeihgtView.constant = 420.0
+        constHeihgtView.constant = 480.0
         
         selectEView.isHidden = false
         selectNView.isHidden = true
     }
 
     @IBAction func btnExistingUserAction(_ sender: UIButton) {
-        constHeihgtWelfare.constant = 60.0
+        constHeihgtWelfare.constant = 120.0
         constHeihgtNewUser.constant = 0.0
-        constHeihgtView.constant = 420.0
+        constHeihgtView.constant = 480.0
         
         selectEView.isHidden = false
         selectNView.isHidden = true

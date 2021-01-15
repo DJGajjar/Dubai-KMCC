@@ -152,6 +152,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SelectionCell
         
+        cell.selectionStyle = .none
+        
         if isLogin == "No" {
             cell.titleLabel.text = ["Home","About Us"][indexPath.row]
             cell.imgIcon.image = UIImage(named: ["HomeIcon","AboutIcon"][indexPath.row])
@@ -164,7 +166,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         
@@ -174,7 +175,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
                     
             if indexPath.row == 0 {
                 sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
-                
                 
                 if let identifier = sideMenuController?.currentCacheIdentifier() {
                     print("[Example] View Controller Cache Identifier: \(identifier)")
@@ -189,7 +189,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
                     print("[Example] View Controller Cache Identifier: \(identifier)")
                 }
             }
-            
         }else {
             if indexPath.row == 0 {
                 sideMenuController?.setContentViewController(with: "\(row)", animated: Preferences.shared.enableTransitionAnimation)
@@ -238,9 +237,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
               
         sideMenuController?.hideMenu()
     }
-    
 }
+
 extension MenuViewController: SideMenuControllerDelegate {
+    
     func sideMenuController(_ sideMenuController: SideMenuController,
                             animationControllerFrom fromVC: UIViewController,
                             to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -272,12 +272,10 @@ extension MenuViewController: SideMenuControllerDelegate {
     }
 }
 
-
 class SelectionCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imgIcon: UIImageView!
 }
-
 
 class NavigationController: UINavigationController {
 

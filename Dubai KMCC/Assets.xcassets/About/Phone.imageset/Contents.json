@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "AppIcon.png",
+      "filename" : "Phone.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "AppIcon@2x.png",
+      "filename" : "Phone@2x.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "AppIcon@3x.png",
+      "filename" : "Phone@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }

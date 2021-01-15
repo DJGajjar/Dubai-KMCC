@@ -37,6 +37,7 @@ class SchemeRegiViewController: UIViewController {
     @IBOutlet weak var tblAction: UITableView!
     
     @IBOutlet var viewAction: UIView!
+    @IBOutlet var viewBack: UIView!
     
     @IBOutlet var constHeightAction: NSLayoutConstraint!
     
@@ -118,59 +119,77 @@ class SchemeRegiViewController: UIViewController {
         viewImgUpload_1.layer.borderColor = UIColor.appColor.cgColor
         viewImgUpload_2.layer.borderColor = UIColor.appColor.cgColor
         
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
+//
+//        viewBack.addGestureRecognizer(tapGestureRecognizer)
+        
+        viewAction.layer.shadowColor = UIColor.shadowColor.cgColor
+        viewAction.layer.shadowOpacity = 0.5
+        viewAction.layer.shadowOffset = CGSize(width: -1, height: 1)
+        viewAction.layer.shadowRadius = 10
+        viewAction.layer.shouldRasterize = true
+        
+        if !UIAccessibility.isReduceTransparencyEnabled {
+            viewBack.backgroundColor = .clear
+
+            let blurEffect = UIBlurEffect(style: .light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = self.viewBack.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+            viewBack.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+            viewBack.addSubview(viewAction)
+        } else {
+            viewBack.backgroundColor = .white
+        }
+        
         self.tblAction.register(UINib(nibName: "ActionCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
+    }
+    
+    @objc func didTapView(_ sender: UITapGestureRecognizer) {
+        print("did tap view", sender)
+        viewBack.isHidden = true
     }
     
     @IBAction func btnPanchayatNameAction(_ sender: UIButton) {
         
-        constHeightAction.constant = btnPanchayatName.frame.origin.y
+        viewBack.isHidden = false
+        viewAction.isHidden = false
+        
+        constHeightAction.constant = (UIScreen.main.bounds.size.height - 222)/2
         
         strBtnAction = "1"
-        
-        if self.viewAction.isHidden == false {
-            self.viewAction.isHidden = true
-        }else {
-            self.viewAction.isHidden = false
-        }
     }
     
     @IBAction func btnMandalamAction(_ sender: UIButton) {
         
-        constHeightAction.constant = btnMandalam.frame.origin.y + 46
+        viewBack.isHidden = false
+        viewAction.isHidden = false
+        
+        constHeightAction.constant = (UIScreen.main.bounds.size.height - 222)/2
         
         strBtnAction = "2"
-        
-        if self.viewAction.isHidden == false {
-            self.viewAction.isHidden = true
-        }else {
-            self.viewAction.isHidden = false
-        }
     }
     
     @IBAction func btnJillaAction(_ sender: UIButton) {
         
-        constHeightAction.constant = btnJilla.frame.origin.y + 46
+        viewBack.isHidden = false
+        viewAction.isHidden = false
+        
+        constHeightAction.constant = (UIScreen.main.bounds.size.height - 222)/2
         
         strBtnAction = "3"
-        
-        if self.viewAction.isHidden == false {
-            self.viewAction.isHidden = true
-        }else {
-            self.viewAction.isHidden = false
-        }
     }
     
     @IBAction func btnEmirateAction(_ sender: UIButton) {
         
-        constHeightAction.constant = btnEmirate.frame.origin.y + 46
+        viewBack.isHidden = false
+        viewAction.isHidden = false
+        
+        constHeightAction.constant = (UIScreen.main.bounds.size.height - 222)/2
         
         strBtnAction = "4"
-        
-        if self.viewAction.isHidden == false {
-            self.viewAction.isHidden = true
-        }else {
-            self.viewAction.isHidden = false
-        }
     }
     
     @IBAction func btnSubmitAction(_ sender: UIButton) {
@@ -192,6 +211,8 @@ extension SchemeRegiViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let actionCell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! ActionCell
         
+        actionCell.selectionStyle = .none
+
         actionCell.lblAction.text = self.actionArray[indexPath.row]
         
         return actionCell
@@ -214,5 +235,6 @@ extension SchemeRegiViewController : UITableViewDelegate, UITableViewDataSource 
         }
         
         self.viewAction.isHidden = true
+        self.viewBack.isHidden = true
     }
 }

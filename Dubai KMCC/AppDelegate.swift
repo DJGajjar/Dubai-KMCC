@@ -55,6 +55,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:5))
         return paddingView
     }
+    
+    func getTextFieldLeftAndRight_1View() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:10))
+        return paddingView
+        
+    }
+    
+    func getTextFieldLeftAndRightViewInEdit_1Profile() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:5))
+        return paddingView
+    }
 }
 
 #if DEBUG

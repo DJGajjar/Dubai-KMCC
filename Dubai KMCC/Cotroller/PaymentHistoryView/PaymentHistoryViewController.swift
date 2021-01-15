@@ -58,6 +58,9 @@ extension PaymentHistoryViewController : UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let payHistoryCell = tableView.dequeueReusableCell(withIdentifier: "PaymentHistoryCell") as! PaymentHisCell
+        
+        payHistoryCell.selectionStyle = .none
+        
         return payHistoryCell
     }
     

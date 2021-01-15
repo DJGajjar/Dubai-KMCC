@@ -14,9 +14,11 @@ class PayRequestViewController: UIViewController {
     
     @IBOutlet weak var tblAction: UITableView!
     
+    @IBOutlet var constHeihgtView: NSLayoutConstraint!
+    
     @IBOutlet var viewAction: UIView!
     
-    var actionArray = ["Renewal","Renewal","Renewal","Renewal","Renewal"]
+    var actionArray = ["Renewal","Topup"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,8 @@ class PayRequestViewController: UIViewController {
         txtAmount.layer.borderColor = UIColor.borderColor.cgColor
 
         viewAction.layer.borderColor = UIColor.borderColor.cgColor
+        
+        constHeihgtView.constant = 66.0
         
         self.tblAction.register(UINib(nibName: "ActionCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
     }
@@ -63,6 +67,7 @@ extension PayRequestViewController : UITableViewDelegate, UITableViewDataSource 
         let actionCell = tableView.dequeueReusableCell(withIdentifier: "ActionCell") as! ActionCell
         
         actionCell.lblAction.text = self.actionArray[indexPath.row]
+        actionCell.selectionStyle = .none
         
         return actionCell
     }

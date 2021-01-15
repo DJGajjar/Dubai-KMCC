@@ -41,4 +41,8 @@ class RenewCardViewController: UIViewController {
     @IBAction func btnUploadImg2Action(_ sender: UIButton) {
         print("Upload 2")
     }
+    
+    @IBAction func btnSubmitAction(_ sender: UIButton) {
+        print("Submit")
+    }
 }
