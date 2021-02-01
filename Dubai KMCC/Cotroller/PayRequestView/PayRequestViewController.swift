@@ -15,6 +15,7 @@ class PayRequestViewController: UIViewController {
     @IBOutlet weak var tblAction: UITableView!
     
     @IBOutlet var constHeihgtView: NSLayoutConstraint!
+    @IBOutlet var constTitleHeight: NSLayoutConstraint!
     
     @IBOutlet var viewAction: UIView!
     
@@ -36,6 +37,12 @@ class PayRequestViewController: UIViewController {
         constHeihgtView.constant = 66.0
         
         self.tblAction.register(UINib(nibName: "ActionCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
+        
+        if SharedFunctions.sharedInstance().isiPhone6() ||  SharedFunctions.sharedInstance().isiPhone6P() {
+            constTitleHeight.constant = 20.0
+        }else {
+            constTitleHeight.constant = 45.0
+        }
     }
     
     @IBAction func btnSelectAction(_ sender: UIButton) {

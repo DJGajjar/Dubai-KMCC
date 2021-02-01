@@ -16,6 +16,7 @@
 		1822455325972A4000A90E0E /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822455125972A4000A90E0E /* NotificationCell.swift */; };
 		1822455425972A4000A90E0E /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1822455225972A4000A90E0E /* NotificationCell.xib */; };
 		182245602597391F00A90E0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822455F2597391F00A90E0E /* LoginViewController.swift */; };
+		1823DC6625BECF0B00265370 /* SharedFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823DC6525BECF0B00265370 /* SharedFunctions.swift */; };
 		183613322595E48C005C1643 /* Avenir-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1836132F2595E48C005C1643 /* Avenir-Book.otf */; };
 		183613332595E48C005C1643 /* Avenir-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 183613302595E48C005C1643 /* Avenir-Medium.otf */; };
 		183613342595E48C005C1643 /* Avenir-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 183613312595E48C005C1643 /* Avenir-Roman.otf */; };
@@ -35,6 +36,8 @@
 		18D22E132599C2CE000011B4 /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D22E112599C2CE000011B4 /* ActionCell.xib */; };
 		18D22E202599C7CA000011B4 /* PaymentHisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D22E1E2599C7C9000011B4 /* PaymentHisCell.swift */; };
 		18D22E212599C7CA000011B4 /* PaymentHisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D22E1F2599C7C9000011B4 /* PaymentHisCell.xib */; };
+		18E0D39B25B5864A009984F6 /* RegisterPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E0D39A25B5864A009984F6 /* RegisterPDFViewController.swift */; };
+		18E0D3F325B5B01F009984F6 /* registerterms.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18E0D3F225B5B01F009984F6 /* registerterms.pdf */; };
 		18EF430E2595B52D00314F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF430C2595B52D00314F02 /* Main.storyboard */; };
 		18EF43102595B53100314F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EF430F2595B53100314F02 /* Assets.xcassets */; };
 		18EF43132595B53100314F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF43112595B53100314F02 /* LaunchScreen.storyboard */; };
@@ -72,6 +75,7 @@
 		1822455125972A4000A90E0E /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		1822455225972A4000A90E0E /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		1822455F2597391F00A90E0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1823DC6525BECF0B00265370 /* SharedFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFunctions.swift; sourceTree = "<group>"; };
 		1836132F2595E48C005C1643 /* Avenir-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Book.otf"; sourceTree = "<group>"; };
 		183613302595E48C005C1643 /* Avenir-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.otf"; sourceTree = "<group>"; };
 		183613312595E48C005C1643 /* Avenir-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Roman.otf"; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		18D22E112599C2CE000011B4 /* ActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
 		18D22E1E2599C7C9000011B4 /* PaymentHisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHisCell.swift; sourceTree = "<group>"; };
 		18D22E1F2599C7C9000011B4 /* PaymentHisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentHisCell.xib; sourceTree = "<group>"; };
+		18E0D39A25B5864A009984F6 /* RegisterPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPDFViewController.swift; sourceTree = "<group>"; };
+		18E0D3F225B5B01F009984F6 /* registerterms.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = registerterms.pdf; sourceTree = "<group>"; };
 		18EF43032595B52D00314F02 /* Dubai KMCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dubai KMCC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EF430D2595B52D00314F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EF430F2595B53100314F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 				1822455F2597391F00A90E0E /* LoginViewController.swift */,
 				1884297B25974D840001F884 /* SignUpViewController.swift */,
 				1884298E25976C170001F884 /* ForgotPasswordViewController.swift */,
+				18E0D39A25B5864A009984F6 /* RegisterPDFViewController.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -225,6 +232,8 @@
 		1836132E2595E46C005C1643 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				1823DC6525BECF0B00265370 /* SharedFunctions.swift */,
+				18E0D3F225B5B01F009984F6 /* registerterms.pdf */,
 				1836132D2595E45E005C1643 /* Font */,
 				18361357259611E0005C1643 /* Extensions.swift */,
 				1884298025975CAF0001F884 /* Constant.swift */,
@@ -519,6 +528,7 @@
 				18EF43102595B53100314F02 /* Assets.xcassets in Resources */,
 				183613342595E48C005C1643 /* Avenir-Roman.otf in Resources */,
 				18D22E132599C2CE000011B4 /* ActionCell.xib in Resources */,
+				18E0D3F325B5B01F009984F6 /* registerterms.pdf in Resources */,
 				18EF430E2595B52D00314F02 /* Main.storyboard in Resources */,
 				1822455425972A4000A90E0E /* NotificationCell.xib in Resources */,
 				183613322595E48C005C1643 /* Avenir-Book.otf in Resources */,
@@ -662,6 +672,7 @@
 				188429862597681A0001F884 /* AboutUsViewController.swift in Sources */,
 				1884297C25974D840001F884 /* SignUpViewController.swift in Sources */,
 				18EF43672595BC1100314F02 /* AppDelegate.swift in Sources */,
+				1823DC6625BECF0B00265370 /* SharedFunctions.swift in Sources */,
 				1822454925972A1C00A90E0E /* NotificationViewController.swift in Sources */,
 				18D22E0B2599BBCA000011B4 /* DateHeader.swift in Sources */,
 				18842994259778CB0001F884 /* SchemeRegiViewController.swift in Sources */,
@@ -670,6 +681,7 @@
 				188429B32597794D0001F884 /* RenewCardViewController.swift in Sources */,
 				1884298125975CB00001F884 /* Constant.swift in Sources */,
 				188429A9259779220001F884 /* PaymentHistoryViewController.swift in Sources */,
+				18E0D39B25B5864A009984F6 /* RegisterPDFViewController.swift in Sources */,
 				1884298F25976C170001F884 /* ForgotPasswordViewController.swift in Sources */,
 				18EF438A2595BC4600314F02 /* HomeViewController.swift in Sources */,
 				18361358259611E0005C1643 /* Extensions.swift in Sources */,
@@ -849,18 +861,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZCX4F4VAQE;
 				INFOPLIST_FILE = "Dubai KMCC/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dubai.KMCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Dubai_KMCC_Dev_Cer;
+				PROVISIONING_PROFILE_SPECIFIER = Dubai_KMCC_Pro_Certificates;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -872,18 +885,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZCX4F4VAQE;
 				INFOPLIST_FILE = "Dubai KMCC/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dubai.KMCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Dubai_KMCC_Dev_Cer;
+				PROVISIONING_PROFILE_SPECIFIER = Dubai_KMCC_Pro_Certificates;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

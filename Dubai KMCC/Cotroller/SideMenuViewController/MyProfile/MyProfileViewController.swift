@@ -24,6 +24,8 @@ class MyProfileViewController: UIViewController {
     @IBOutlet var txtNewPassword: UITextField!
     @IBOutlet var txtConfirmPassword: UITextField!
 
+    @IBOutlet var constTitleHeight: NSLayoutConstraint!
+    
     @IBInspectable var underLineColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
     override func viewDidLoad() {
@@ -101,6 +103,13 @@ class MyProfileViewController: UIViewController {
         txtConfirmPassword.rightViewMode = .always
         txtConfirmPassword.layer.borderColor = UIColor.borderColor.cgColor
         
+        viewProfile.layer.borderColor = UIColor.imgBorderColor.cgColor
+        
+        if SharedFunctions.sharedInstance().isiPhone6() ||  SharedFunctions.sharedInstance().isiPhone6P() {
+            constTitleHeight.constant = 20.0
+        }else {
+            constTitleHeight.constant = 45.0
+        }
     }
 
     @IBAction func btnSelectProfilePicAction(_ sender: UIButton) {

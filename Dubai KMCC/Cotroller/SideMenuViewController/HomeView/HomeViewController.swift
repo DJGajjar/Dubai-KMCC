@@ -33,6 +33,7 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
     @IBOutlet var constHeightView: NSLayoutConstraint!
     
     var bannerDataArray = ["Slider_1","Slider_2",""]
+    var galleryArray = ["Gallery_3","Gallery_4","Gallery_1","Gallery_5","Gallery_2"]
     
     var isLogin: String!
     
@@ -179,7 +180,7 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
         if collectionView  == collectionInfo {
             return bannerDataArray.count
         }else{
-            return 10
+            return galleryArray.count
         }
     }
     
@@ -195,8 +196,9 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"EventCell", for: indexPath as IndexPath)
-//            let imageUrl = self.offerCategoryArray[indexPath.row]
-//            let profileImageView : UIImageView = cell.contentView.viewWithTag(1010) as! UIImageView
+            let imageUrl = self.galleryArray[indexPath.row]
+            let profileImageView : UIImageView = cell.contentView.viewWithTag(1010) as! UIImageView
+            profileImageView.image = UIImage(named: imageUrl)
 //            let urls = URL.init(string: imageUrl)
 //            profileImageView.sd_setImage(with: urls , placeholderImage: nil)
             return cell
@@ -226,7 +228,7 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
     
     func startTimer() {
 
-     _ =  Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.scrollAutomatically), userInfo: nil, repeats: true)
+     _ =  Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.scrollAutomatically), userInfo: nil, repeats: true)
      }
 
      @objc func scrollAutomatically(_ timer1: Timer) {

@@ -73,18 +73,18 @@ class SignUpViewController: UIViewController {
         txtEmiratesID.leftViewMode = .always
         txtEmiratesID.rightViewMode = .always
         
-        constHeihgtWelfare.constant = 120.0
+        constHeihgtWelfare.constant = 60.0//120.0
         constHeihgtNewUser.constant = 0.0
-        constHeihgtView.constant = 480.0
+        constHeihgtView.constant = 480.0//540.0
         
         selectEView.isHidden = false
         selectNView.isHidden = true
     }
 
     @IBAction func btnExistingUserAction(_ sender: UIButton) {
-        constHeihgtWelfare.constant = 120.0
+        constHeihgtWelfare.constant = 60.0//120.0
         constHeihgtNewUser.constant = 0.0
-        constHeihgtView.constant = 480.0
+        constHeihgtView.constant = 480.0//540.0
         
         selectEView.isHidden = false
         selectNView.isHidden = true
@@ -111,5 +111,9 @@ class SignUpViewController: UIViewController {
     
     @IBAction func btnLoginAction(_ sender: UIButton) {
         navigationController!.popViewController(animated: true)
+    }
+    
+    @IBAction func btnRegisterPDFAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "RegisterPDF", sender: nil)
     }
 }

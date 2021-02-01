@@ -40,6 +40,7 @@ class SchemeRegiViewController: UIViewController {
     @IBOutlet var viewBack: UIView!
     
     @IBOutlet var constHeightAction: NSLayoutConstraint!
+    @IBOutlet var constTitleHeight: NSLayoutConstraint!
     
     var actionArray = ["Renewal","Renewal","Renewal","Renewal","Renewal"]
     
@@ -116,8 +117,8 @@ class SchemeRegiViewController: UIViewController {
         txtRelativeMobileNumber.rightViewMode = .always
             
         viewAction.layer.borderColor = UIColor.borderColor.cgColor
-        viewImgUpload_1.layer.borderColor = UIColor.appColor.cgColor
-        viewImgUpload_2.layer.borderColor = UIColor.appColor.cgColor
+//        viewImgUpload_1.layer.borderColor = UIColor.appColor.cgColor
+//        viewImgUpload_2.layer.borderColor = UIColor.appColor.cgColor
         
 //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
 //
@@ -145,6 +146,12 @@ class SchemeRegiViewController: UIViewController {
         }
         
         self.tblAction.register(UINib(nibName: "ActionCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
+        
+        if SharedFunctions.sharedInstance().isiPhone6() ||  SharedFunctions.sharedInstance().isiPhone6P() {
+            constTitleHeight.constant = 20.0
+        }else {
+            constTitleHeight.constant = 45.0
+        }
     }
     
     @objc func didTapView(_ sender: UITapGestureRecognizer) {

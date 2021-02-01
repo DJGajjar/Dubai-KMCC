@@ -15,6 +15,8 @@ class RenewCardViewController: UIViewController {
     @IBOutlet var viewImgUpload_1: UIView!
     @IBOutlet var viewImgUpload_2: UIView!
     
+    @IBOutlet var constTitleHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,12 @@ class RenewCardViewController: UIViewController {
         
         viewImgUpload_1.layer.borderColor = UIColor.appColor.cgColor
         viewImgUpload_2.layer.borderColor = UIColor.appColor.cgColor
+        
+        if SharedFunctions.sharedInstance().isiPhone6() ||  SharedFunctions.sharedInstance().isiPhone6P() {
+            constTitleHeight.constant = 20.0
+        }else {
+            constTitleHeight.constant = 45.0
+        }
     }
     
     @IBAction func btnUploadImg1Action(_ sender: UIButton) {

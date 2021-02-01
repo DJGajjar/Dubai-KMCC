@@ -11,6 +11,8 @@ class PaymentHistoryViewController: UIViewController {
 
     @IBOutlet weak var tblPayHistory: UITableView!
     
+    @IBOutlet var constTitleHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,12 @@ class PaymentHistoryViewController: UIViewController {
         
         self.tblPayHistory.register(UINib(nibName: "PaymentHisCell", bundle: nil), forCellReuseIdentifier: "PaymentHistoryCell")
         self.tblPayHistory.register(UINib(nibName: "DateHeader", bundle: nil), forCellReuseIdentifier: "DateHeader")
+        
+        if SharedFunctions.sharedInstance().isiPhone6() ||  SharedFunctions.sharedInstance().isiPhone6P() {
+            constTitleHeight.constant = 20.0
+        }else {
+            constTitleHeight.constant = 45.0
+        }
     }
 
 }
